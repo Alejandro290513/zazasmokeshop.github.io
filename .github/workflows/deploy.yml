@@ -2,62 +2,25 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  validate-and-build:
+  build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-
-      - name: Debug Environment
-        run: |
-          echo "Node version:"
-          node -v
-          echo "NPM version:"
-          npm -v
-          echo "Files in root:"
-          ls -F
-          echo "Files in scripts:"
-          ls -F scripts/
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Validate encoding
-        run: npm run validate-encoding
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
+      - name: Checkout your repository using git
+        uses: actions/checkout@v6
+      - name: Install, build, and upload your site
+        uses: withastro/action@v6
+        
   deploy:
-    needs: validate-and-build
-    if: github.ref == 'refs/heads/main'
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -65,4 +28,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
