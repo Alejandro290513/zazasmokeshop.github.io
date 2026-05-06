@@ -146,7 +146,8 @@ const categoryColors: Record<string, string> = {
               
               <!-- Promo info -->
               {product.promo && (
-                <p class={product.promo.includes('×') || product.promo.includes('ml') || product.promo.includes('g') || product.name.includes('Gomas') || product.name.includes('Cueros') ? "promo-highlight" : "text-cyan-400/70 text-[10px] mb-6 leading-snug"}>
+                <p class={product.promo.includes('×') || product.promo.includes('|') ? "promo-highlight" : "unit-price-highlight"}>
+                  {!product.promo.includes('×') && !product.promo.includes('|') ? "Precio por unidad: " : ""}
                   {product.promo}
                 </p>
               )}
@@ -300,6 +301,14 @@ const categoryColors: Record<string, string> = {
       margin-bottom: 1.25rem;
       font-size: 0.75rem;
       letter-spacing: 0.05em;
+    }
+    
+    .unit-price-highlight {
+      color: #a855f7; /* Vibrant Purple */
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      display: block;
     }
     
     .scroll-mt-24 { scroll-margin-top: 6rem; }
@@ -498,17 +507,25 @@ const categoryColors: Record<string, string> = {
         .find(r => item.quantity >= r.minQty);
       const effectiveUnitPrice = Math.round(rule ? rule.pricePerUnit : item.price);
       
-      const subtotal = Math.round(window.calculateTotal(item, item.quantity, item.isBox));
-      const div = document.createElement('div');
-      div.className = 'cart-item cart-item-enter flex items-center gap-3 bg-slate-800/50 rounded-xl p-3 border border-white/5';
-      div.innerHTML = `
-        <span class="text-2xl flex-shrink-0">${item.emoji}</span>
-        <div class="flex-1 min-w-0">
+        const subtotal = Math.round(window.calculateTotal(item, item.quantity, item.isBox));
+        const div = document.createElement('div');
+        div.className = 'cart-item cart-item-enter flex items-center gap-3 bg-slate-800/50 rounded-xl p-3 border border-white/5';
+        
+        // Handle images, with emoji fallback
+        const imageContent = item.customIcon 
+          ? `<img src="${item.customIcon}" alt="${item.name}" class="w-12 h-12 object-contain rounded-lg flex-shrink-0" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+          : '';
+        const emojiContent = `<span class="text-2xl flex-shrink-0 w-12 h-12 flex items-center justify-center ${item.customIcon ? 'hidden' : ''}">${item.emoji || '📦'}</span>`;
+
+        div.innerHTML = `
+          ${imageContent}
+          ${emojiContent}
+          <div class="flex-1 min-w-0">
           <p class="text-white text-sm font-bold truncate">${item.name}</p>
           <div class="flex items-center gap-2 mt-1">
             <button onclick="updateCartItemQty(${item.id}, -1)" class="w-5 h-5 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-xs text-white">-</button>
             <span class="text-xs font-bold text-white w-4 text-center">${item.quantity}</span>
-            <button onclick="updateCartItemQty(${item.id}, 1)" class="w-5 h-5 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-xs text-white">+</button>
+            <button onclick="updateCartItemQty(${item.id}, 1)" class="w-5 h-5 rounded-full bg-slate-600 hover:bg-slate-500 flex items-center justify-center text-xs text-white">+</button>
             <span class="text-slate-400 text-xs ml-2">${item.isBox ? '(Caja)' : (item.name.toLowerCase().includes('jeringa')) ? 'g' : 'und'} × $${effectiveUnitPrice.toLocaleString('es-CO')}</span>
           </div>
         </div>
@@ -519,6 +536,7 @@ const categoryColors: Record<string, string> = {
           </button>
         </div>
       `;
+
       container.insertBefore(div, empty || null);
     });
   }
