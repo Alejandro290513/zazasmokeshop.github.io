@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fix bin permissions
+        run: chmod -R +x node_modules/.bin/
+
       - name: Validate encoding
         run: npm run validate-encoding
 
