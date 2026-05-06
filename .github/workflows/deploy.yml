@@ -32,18 +32,7 @@ jobs:
         run: npm install
 
       - name: Validate encoding
-        run: |
-          echo "🔍 Validando encoding de products.json..."
-          node -e "
-          const fs = require('fs');
-          const data = fs.readFileSync('src/data/products.json', 'utf8');
-          const hasErrors = /Ã[¡©­³º]|â€|â\$/.test(data);
-          if (hasErrors) {
-            console.error('❌ Se detectaron problemas de encoding');
-            process.exit(1);
-          }
-          console.log('✅ Encoding válido');
-          "
+        run: node scripts/validate-encoding.cjs
 
       - name: Build
         run: npm run build
