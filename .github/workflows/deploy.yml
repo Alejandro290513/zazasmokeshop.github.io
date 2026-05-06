@@ -31,13 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug files
-        run: |
-          ls -R
-          node -v
-
       - name: Validate encoding
-        run: node scripts/validate-encoding.cjs
+        run: npm run validate-encoding
 
       - name: Build
         run: npm run build

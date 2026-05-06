@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "node scripts/prepare-build.js && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "validate-encoding": "node scripts/validate-encoding.cjs"
   },
   "dependencies": {
     "astro": "^4.15.0",
