@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/prepare-build.js && astro build",
+    "build": "node scripts/prepare-build.js && npx astro build",
     "preview": "astro preview",
     "validate-encoding": "node scripts/validate-encoding.cjs"
   },
