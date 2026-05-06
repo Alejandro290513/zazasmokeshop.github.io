@@ -1,0 +1,111 @@
+---
+interface Props {
+  title?: string;
+}
+const { title = "ZAZA SMOKE SHOP | Catálogo Premium" } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      :root {
+        --jungle-dark: #030712;
+        --jungle-deep: #050d1a;
+        --jungle-mid: #0a1628;
+        --jungle-card: #0d1f35;
+        --neon-blue: #00d4ff;
+        --neon-purple: #a855f7;
+        --neon-teal: #2dd4bf;
+        --neon-pink: #f472b6;
+        --gold: #d4af37;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        background-color: var(--jungle-dark);
+        font-family: 'Nunito', sans-serif;
+        color: #e2e8f0;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+
+      /* Animated jungle bg */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 20% 10%, rgba(88, 28, 135, 0.25) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 90%, rgba(6, 95, 70, 0.2) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 50%, rgba(0, 47, 108, 0.3) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body > * { position: relative; z-index: 1; }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: var(--jungle-dark); }
+      ::-webkit-scrollbar-thumb { background: var(--neon-purple); border-radius: 3px; }
+
+      /* Floating particles */
+      .particle {
+        position: fixed;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+        animation: floatParticle linear infinite;
+      }
+
+      @keyframes floatParticle {
+        0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 0.5; }
+        100% { transform: translateY(-100px) translateX(40px); opacity: 0; }
+      }
+
+      /* Cart notification */
+      @keyframes cartBounce {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+      }
+      .cart-bounce { animation: cartBounce 0.3s ease; }
+    </style>
+  </head>
+  <body>
+    <!-- Particles -->
+    <div id="particles-container" style="position:fixed;inset:0;pointer-events:none;z-index:0;"></div>
+    
+    <slot />
+
+    <script>
+      // Generate floating particles
+      const container = document.getElementById('particles-container');
+      if (container) {
+        const colors = ['#00d4ff', '#a855f7', '#2dd4bf', '#f472b6', '#d4af37'];
+        for (let i = 0; i < 20; i++) {
+          const p = document.createElement('div');
+          p.className = 'particle';
+          p.style.left = Math.random() * 100 + 'vw';
+          p.style.background = colors[Math.floor(Math.random() * colors.length)];
+          p.style.animationDuration = (8 + Math.random() * 12) + 's';
+          p.style.animationDelay = (Math.random() * 8) + 's';
+          p.style.width = (2 + Math.random() * 3) + 'px';
+          p.style.height = p.style.width;
+          container.appendChild(p);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1940 @@
+[
+  {
+    "id": 1,
+    "category": "Cápsulas",
+    "categorySlug": "capsulas",
+    "name": "Cápsula Nacional",
+    "price": 35000,
+    "desc": "La clásica. Potente y accesible para comenzar tu experiencia.",
+    "promo": "1×$35k | 2×$60k | 3×$80k | 4×$100k",
+    "badge": "NAC",
+    "customIcon": "/images/capsulas/capsula_nacional.png",
+    "fileId": "capsula_nacional",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 35000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 30000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 26666.666666666668
+      },
+      {
+        "minQty": 4,
+        "pricePerUnit": 25000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Cápsulas",
+    "categorySlug": "capsulas",
+    "name": "Cápsula Americana",
+    "price": 50000,
+    "desc": "Importada directamente. Calidad superior y efectos potenciados.",
+    "promo": "1×$50k | 2×$80k | 3×$100k",
+    "badge": "USA",
+    "emoji": "🇺🇸",
+    "customIcon": "/images/capsulas/capsula_americana.png",
+    "fileId": "capsula_americana",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 50000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Cápsulas",
+    "categorySlug": "capsulas",
+    "name": "Cápsula CBD",
+    "price": 20000,
+    "desc": "Efecto no psicoactivo. Tranquilizante natural, ideal para relajarte.",
+    "promo": "Precio: $20.000",
+    "badge": "CBD",
+    "emoji": "💚",
+    "customIcon": "/images/capsulas/capsula_cbd.png",
+    "fileId": "capsula_cbd",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 20000
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Cápsulas",
+    "categorySlug": "capsulas",
+    "name": "Jeringa THC Nacional",
+    "price": 60000,
+    "desc": "Extracción en jeringa de alta concentración. Formato 3ml / 5ml / 10ml.",
+    "promo": "3ml $60k | 5ml $80k | 10ml $150k",
+    "badge": null,
+    "emoji": "💉",
+    "customIcon": "/images/capsulas/jeringa_thc_nacional.png",
+    "fileId": "jeringa_thc_nacional",
+    "pricingRules": [
+      {
+        "minQty": 3,
+        "pricePerUnit": 20000
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 16000
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 15000
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "3g",
+        "qty": 3,
+        "price": 60000
+      },
+      {
+        "label": "5g",
+        "qty": 5,
+        "price": 80000
+      },
+      {
+        "label": "10g",
+        "qty": 10,
+        "price": 150000
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Cápsulas",
+    "categorySlug": "capsulas",
+    "name": "Jeringa THC Americano",
+    "price": 80000,
+    "desc": "Extracción premium importada en jeringa. Más contenido varía el precio.",
+    "promo": "3ml $80k | 5ml $120k",
+    "badge": "USA",
+    "customIcon": "/images/capsulas/jeringa_thc_americano.png",
+    "emoji": "💉",
+    "fileId": "jeringa_thc_americano",
+    "pricingRules": [
+      {
+        "minQty": 3,
+        "pricePerUnit": 26666.67
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 24000
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "3g",
+        "qty": 3,
+        "price": 80000
+      },
+      {
+        "label": "5g",
+        "qty": 5,
+        "price": 120000
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Cápsulas Tipo Importadas",
+    "categorySlug": "capsulas-tipo-importadas",
+    "name": "Muha Meds",
+    "price": 45000,
+    "desc": "Marca premium americana. Sabores únicos y efectos superiores.",
+    "promo": "1×$45k | 2×$80k | 3×$100k",
+    "badge": "IMP",
+    "customIcon": "/images/capsulas-tipo-importadas/muha_meds.png",
+    "emoji": "🔥",
+    "fileId": "muha_meds",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Cápsulas Tipo Importadas",
+    "categorySlug": "capsulas-tipo-importadas",
+    "name": "Big Chief",
+    "price": 45000,
+    "desc": "El jefe de los sabores. Concentrado premium con efectos profundos.",
+    "promo": "1×$45k | 2×$80k | 3×$100k",
+    "badge": "IMP",
+    "emoji": "👑",
+    "fileId": "big_chief",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ],
+    "customIcon": "/images/capsulas-tipo-importadas/big_chief.png"
+  },
+  {
+    "id": 8,
+    "category": "Cápsulas Tipo Importadas",
+    "categorySlug": "capsulas-tipo-importadas",
+    "name": "KRT",
+    "price": 45000,
+    "desc": "Formulación especial con terpenos naturales. Sabor auténtico garantizado.",
+    "promo": "1×$45k | 2×$80k | 3×$100k",
+    "badge": "IMP",
+    "emoji": "💜",
+    "fileId": "krt",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ],
+    "customIcon": "/images/capsulas-tipo-importadas/krt.png"
+  },
+  {
+    "id": 9,
+    "category": "Cápsulas Tipo Importadas",
+    "categorySlug": "capsulas-tipo-importadas",
+    "name": "Cookies & Lemonade",
+    "price": 45000,
+    "desc": "Sabor premium con el sello de la icónica marca Cookies.",
+    "promo": "1×$45k | 2×$80k | 3×$100k",
+    "badge": "IMP",
+    "emoji": "ðŸ‹",
+    "fileId": "cookies__lemonade",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ],
+    "customIcon": "/images/capsulas-tipo-importadas/cookies__lemonade.png"
+  },
+  {
+    "id": 10,
+    "category": "Cápsulas Tipo Importadas",
+    "categorySlug": "capsulas-tipo-importadas",
+    "name": "Cápsula Runtz",
+    "price": 45000,
+    "desc": "Derbs & Terps. Terpenos naturales para una experiencia premium.",
+    "promo": "1×$45k | 2×$80k | 3×$100k",
+    "badge": null,
+    "emoji": "ðŸ¬",
+    "fileId": "capsula_runtz",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ],
+    "customIcon": "/images/capsulas-tipo-importadas/capsula_runtz.png"
+  },
+  {
+    "id": 11,
+    "category": "Cápsulas Tipo Importadas",
+    "categorySlug": "capsulas-tipo-importadas",
+    "name": "Cápsula Dabwoods",
+    "price": 45000,
+    "desc": "Marca reconocida mundialmente. Consistencia y potencia en cada uso.",
+    "promo": "1×$45k | 2×$80k | 3×$100k",
+    "badge": null,
+    "emoji": "🌲",
+    "fileId": "capsula_dabwoods",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 3,
+        "pricePerUnit": 33333.333333333336
+      }
+    ],
+    "customIcon": "/images/capsulas-tipo-importadas/capsula_dabwoods.png"
+  },
+  {
+    "id": 12,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Cápsula 1ml sin caja",
+    "price": 40000,
+    "desc": "Originales importadas. Máxima pureza, calidad certificada.",
+    "promo": "1×$40k | 5×$150k | 10×$250k | 20×$350k",
+    "badge": "PROMO",
+    "emoji": "â­",
+    "fileId": "capsula_1ml_sin_caja",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 30000
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 25000
+      },
+      {
+        "minQty": 20,
+        "pricePerUnit": 17500
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "1 und",
+        "qty": 1
+      },
+      {
+        "label": "5 und",
+        "qty": 5
+      },
+      {
+        "label": "10 und",
+        "qty": 10
+      },
+      {
+        "label": "20 und",
+        "qty": 20
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/capsula_1ml_sin_caja.png"
+  },
+  {
+    "id": 13,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Cápsula Sauced 2ML",
+    "price": 70000,
+    "desc": "Potencia 2ml de alta concentración. Efectos duraderos.",
+    "promo": "$70.000",
+    "badge": null,
+    "emoji": "💧",
+    "fileId": "capsula_sauced_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/capsula_sauced_2ml.png"
+  },
+  {
+    "id": 14,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Cápsula Delta 9 2ML",
+    "price": 70000,
+    "desc": "Delta 9 premium en formato 2ml. Alta biodisponibilidad.",
+    "promo": "$70.000",
+    "badge": "D9",
+    "emoji": "ðŸ”µ",
+    "fileId": "capsula_delta_9_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/capsula_delta_9_2ml.png"
+  },
+  {
+    "id": 15,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Modus 2ML",
+    "price": 70000,
+    "desc": "Live rosin auténtico. Pureza máxima sin compromisos.",
+    "promo": "$70.000",
+    "badge": null,
+    "emoji": "✨",
+    "fileId": "modus_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/modus_2ml.png"
+  },
+  {
+    "id": 16,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Modus 3ML",
+    "price": 85000,
+    "desc": "Mayor capacidad para sesiones más largas. Live rosin 3ml.",
+    "promo": "$85.000",
+    "badge": null,
+    "emoji": "✨",
+    "fileId": "modus_3ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 85000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/modus_3ml.png"
+  },
+  {
+    "id": 17,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Budget 1ML",
+    "price": 50000,
+    "desc": "Relación precio-calidad inmejorable. Importada original.",
+    "promo": "1×$50k | 2×$80k",
+    "badge": null,
+    "emoji": "ðŸ’°",
+    "fileId": "budget_1ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 50000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 40000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/budget_1ml.png"
+  },
+  {
+    "id": 18,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Treetop 0.8ML",
+    "price": 60000,
+    "desc": "Compacta y potente. Ideal para llevar a donde vayas.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": null,
+    "emoji": "ðŸŒ³",
+    "fileId": "treetop_08ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 50000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/treetop_08ml.png"
+  },
+  {
+    "id": 19,
+    "category": "Cápsulas Importadas Originales",
+    "categorySlug": "capsulas-originales",
+    "name": "Cápsula Torch 1ML",
+    "price": 60000,
+    "desc": "Torch enciende tu experiencia. Concentrado premium americano.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": null,
+    "emoji": "🔦",
+    "fileId": "capsula_torch_1ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 50000
+      }
+    ],
+    "customIcon": "/images/capsulas-originales/capsula_torch_1ml.png"
+  },
+  {
+    "id": 20,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Brass Knuckles Sencilla",
+    "price": 25000,
+    "desc": "La clásica batería de alta duración. Compatible con cartuchos 510.",
+    "promo": "$25.000",
+    "badge": null,
+    "emoji": "⚡",
+    "fileId": "brass_knuckles_sencilla",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 25000
+      }
+    ],
+    "customIcon": "/images/baterias/brass_knuckles_sencilla.png"
+  },
+  {
+    "id": 21,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Brass Knuckles Tipo C",
+    "price": 35000,
+    "desc": "Carga USB-C. Batería de larga duración con diseño premium.",
+    "promo": "$35.000",
+    "badge": "USB-C",
+    "emoji": "⚡",
+    "fileId": "brass_knuckles_tipo_c",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 35000
+      }
+    ],
+    "customIcon": "/images/baterias/brass_knuckles_tipo_c.png"
+  },
+  {
+    "id": 22,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "All In Pantalla LED",
+    "price": 40000,
+    "desc": "Pantalla LED integrada. Visualiza voltaje y duración de batería.",
+    "promo": "$40.000",
+    "badge": "LED",
+    "emoji": "💡",
+    "fileId": "all_in_pantalla_led",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 40000
+      }
+    ],
+    "customIcon": "/images/baterias/all_in_pantalla_led.png"
+  },
+  {
+    "id": 23,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "All In High",
+    "price": 50000,
+    "desc": "Potencia extra para sesiones intensas. Diseño ergonómico.",
+    "promo": "$50.000",
+    "badge": null,
+    "emoji": "🔋",
+    "fileId": "all_in_high",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 50000
+      }
+    ],
+    "customIcon": "/images/baterias/all_in_high.png"
+  },
+  {
+    "id": 24,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "All In High Pro LED",
+    "price": 60000,
+    "desc": "Pantalla LED + alto voltaje. El nivel profesional de tu experiencia.",
+    "promo": "$60.000",
+    "badge": "PRO",
+    "emoji": "🔋",
+    "fileId": "all_in_high_pro_led",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      }
+    ],
+    "customIcon": "/images/baterias/all_in_high_pro_led.png"
+  },
+  {
+    "id": 25,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "All In Secret Pro",
+    "price": 70000,
+    "desc": "Diseño discreto con pantalla LED. Potencia secreta en tu bolsillo.",
+    "promo": "$70.000",
+    "badge": "PRO",
+    "emoji": "ðŸ•µï¸",
+    "fileId": "all_in_secret_pro",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/baterias/all_in_secret_pro.png"
+  },
+  {
+    "id": 26,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Kodo Zodiac",
+    "price": 70000,
+    "desc": "Pantalla LED zodiacal. Diseño único coleccionable.",
+    "promo": "$70.000",
+    "badge": "LED",
+    "emoji": "♈",
+    "fileId": "kodo_zodiac",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/baterias/kodo_zodiac.png"
+  },
+  {
+    "id": 27,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Wulf Pro Digit",
+    "price": 60000,
+    "desc": "Pantalla LED digital premium. Control total de tu voltaje.",
+    "promo": "$60.000",
+    "badge": "LED",
+    "emoji": "📟",
+    "fileId": "wulf_pro_digit",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      }
+    ],
+    "customIcon": "/images/baterias/wulf_pro_digit.png"
+  },
+  {
+    "id": 28,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Wulf Kodo Pro",
+    "price": 60000,
+    "desc": "Pantalla LED. Alta potencia en formato compacto.",
+    "promo": "$60.000",
+    "badge": "LED",
+    "emoji": "⚡",
+    "fileId": "wulf_kodo_pro",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      }
+    ],
+    "customIcon": "/images/baterias/wulf_kodo_pro.png"
+  },
+  {
+    "id": 29,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Wulf Recon",
+    "price": 80000,
+    "desc": "Pantalla LED de alto rendimiento. La batería más potente de la línea.",
+    "promo": "$80.000",
+    "badge": "LED",
+    "emoji": "ðŸ›¡ï¸",
+    "fileId": "wulf_recon",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 80000
+      }
+    ],
+    "customIcon": "/images/baterias/wulf_recon.png"
+  },
+  {
+    "id": 30,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Wulf Grid",
+    "price": 60000,
+    "desc": "Pantalla LED con diseño de rejilla. Estilo industrial moderno.",
+    "promo": "$60.000",
+    "badge": "LED",
+    "emoji": "⚡",
+    "fileId": "wulf_grid",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      }
+    ],
+    "customIcon": "/images/baterias/wulf_grid.png"
+  },
+  {
+    "id": 31,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Wulf Ari Slim",
+    "price": 75000,
+    "desc": "Incluye cápsula para extracción sólida. Diseño ultra-delgado.",
+    "promo": "$75.000",
+    "badge": "COMBO",
+    "emoji": "💎",
+    "fileId": "wulf_ari_slim",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 75000
+      }
+    ],
+    "customIcon": "/images/baterias/wulf_ari_slim.png"
+  },
+  {
+    "id": 32,
+    "category": "Baterías",
+    "categorySlug": "baterias",
+    "name": "Wulf Knife",
+    "price": 85000,
+    "desc": "Incluye punta cerámica para extracción sólida. Todo en uno.",
+    "promo": "$85.000",
+    "badge": "COMBO",
+    "emoji": "ðŸ”ª",
+    "fileId": "wulf_knife",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 85000
+      }
+    ],
+    "customIcon": "/images/baterias/wulf_knife.png"
+  },
+  {
+    "id": 33,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Live Resin Sugar",
+    "price": 60000,
+    "desc": "100% diamantes sólidos THC americano. Efectos superiores garantizados.",
+    "promo": "1g $60k | 2×$100k | Onza $900k",
+    "badge": "TOP",
+    "emoji": "💎",
+    "fileId": "live_resin_sugar",
+    "pricingRules": [
+      {
+        "minQty": 2,
+        "pricePerUnit": 50000
+      }
+    ],
+    "customIcon": "/images/extracciones/live_resin_sugar.png"
+  },
+  {
+    "id": 34,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Extracciones WAX Nacional",
+    "price": 40000,
+    "desc": "Gramo de extracción con THC nacional. Efectos superiores.",
+    "promo": "1g $40k | 2×$70k",
+    "badge": null,
+    "emoji": "🟨",
+    "fileId": "extracciones_wax_nacional",
+    "pricingRules": [
+      {
+        "minQty": 2,
+        "pricePerUnit": 35000
+      }
+    ],
+    "customIcon": "/images/extracciones/extracciones_wax_nacional.png"
+  },
+  {
+    "id": 35,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Extracción Sin Solvente",
+    "price": 85000,
+    "desc": "Extracción premium sin ningún tipo de solventes. Lo más puro disponible.",
+    "promo": "1g $85k | 2×$150k",
+    "badge": "PURE",
+    "emoji": "🌟",
+    "fileId": "extraccion_sin_solvente",
+    "pricingRules": [
+      {
+        "minQty": 2,
+        "pricePerUnit": 75000
+      }
+    ],
+    "customIcon": "/images/extracciones/extraccion_sin_solvente.png"
+  },
+  {
+    "id": 36,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "PT420 Todo en 1",
+    "price": 55000,
+    "desc": "Nectar collector todo en uno, listo para extracciones sólidas.",
+    "promo": "$55.000",
+    "badge": null,
+    "emoji": "🏺",
+    "fileId": "pt420_todo_en_1",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 55000
+      }
+    ],
+    "customIcon": "/images/extracciones/pt420_todo_en_1.png"
+  },
+  {
+    "id": 37,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Wulf Razr",
+    "price": 170000,
+    "desc": "Dispositivo 2 en 1. Colector de néctar + cuchillo caliente para sólidas.",
+    "promo": "$170.000",
+    "badge": "2in1",
+    "emoji": "âš”ï¸",
+    "fileId": "wulf_razr",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 170000
+      }
+    ],
+    "customIcon": "/images/extracciones/wulf_razr.png"
+  },
+  {
+    "id": 38,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Little Dipper",
+    "price": 150000,
+    "desc": "Compacto y portátil. Batería de larga duración para extracciones sólidas.",
+    "promo": "$150.000",
+    "badge": null,
+    "emoji": "✨",
+    "fileId": "little_dipper",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 150000
+      }
+    ],
+    "customIcon": "/images/extracciones/little_dipper.png"
+  },
+  {
+    "id": 39,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Nectar Collector",
+    "price": 30000,
+    "desc": "Nectar collector estándar. Perfecto para principiantes.",
+    "promo": "$30.000",
+    "badge": null,
+    "emoji": "🌺",
+    "fileId": "nectar_collector",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 30000
+      }
+    ],
+    "customIcon": "/images/extracciones/nectar_collector.png"
+  },
+  {
+    "id": 40,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Nectar Collector Premium",
+    "price": 35000,
+    "desc": "Versión premium con mejor difusión. Hits más suaves y sabrosos.",
+    "promo": "$35.000",
+    "badge": null,
+    "emoji": "🌺",
+    "fileId": "nectar_collector_premium",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 35000
+      }
+    ],
+    "customIcon": "/images/extracciones/nectar_collector_premium.png"
+  },
+  {
+    "id": 41,
+    "category": "Extracciones",
+    "categorySlug": "extracciones",
+    "name": "Cápsula para Extracciones",
+    "price": 25000,
+    "desc": "Cápsula especial compatible con dispositivos de extracción sólida.",
+    "promo": "$25.000",
+    "badge": null,
+    "emoji": "💊",
+    "fileId": "capsula_para_extracciones",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 25000
+      }
+    ],
+    "customIcon": "/images/extracciones/capsula_para_extracciones.png"
+  },
+  {
+    "id": 42,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Mezcla Suprema 2ML",
+    "price": 50000,
+    "desc": "Máxima pureza, sabor natural, cero fugas. Potencia superior de principio a fin.",
+    "promo": "1×$50k | 5×$175k | 10×$250k | 20×$350k",
+    "badge": "PROMO",
+    "emoji": "🔥",
+    "fileId": "mezcla_suprema_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 50000
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 35000
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 25000
+      },
+      {
+        "minQty": 20,
+        "pricePerUnit": 17500
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "1 und",
+        "qty": 1,
+        "price": null
+      },
+      {
+        "label": "5 und",
+        "qty": 5,
+        "price": 175000
+      },
+      {
+        "label": "10 und",
+        "qty": 10,
+        "price": 250000
+      },
+      {
+        "label": "20 und",
+        "qty": 20,
+        "price": 350000
+      }
+    ],
+    "customIcon": "/images/desechables/mezcla_suprema_2ml.png"
+  },
+  {
+    "id": 43,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "No Cap 1ML",
+    "price": 40000,
+    "desc": "Sin mentiras, solo calidad. Potente y confiable cada vez.",
+    "promo": "1×$40k | 5×$150k | 10×$220k | 20×$300k",
+    "badge": "PROMO",
+    "emoji": "ðŸ’¯",
+    "fileId": "no_cap_1ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 40000
+      },
+      {
+        "minQty": 5,
+        "pricePerUnit": 30000
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 22000
+      },
+      {
+        "minQty": 20,
+        "pricePerUnit": 15000
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "1 und",
+        "qty": 1,
+        "price": null
+      },
+      {
+        "label": "5 und",
+        "qty": 5,
+        "price": 175000
+      },
+      {
+        "label": "10 und",
+        "qty": 10,
+        "price": 250000
+      },
+      {
+        "label": "20 und",
+        "qty": 20,
+        "price": 350000
+      }
+    ],
+    "customIcon": "/images/desechables/no_cap_1ml.png"
+  },
+  {
+    "id": 44,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Elf 8ML",
+    "price": 120000,
+    "desc": "Gran capacidad 8ml. Sesiones largas sin recargas.",
+    "promo": "$120.000",
+    "badge": null,
+    "emoji": "ðŸ§",
+    "fileId": "elf_8ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 120000
+      }
+    ],
+    "customIcon": "/images/desechables/elf_8ml.png"
+  },
+  {
+    "id": 45,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Elf 5ML",
+    "price": 90000,
+    "desc": "Formato estándar de la línea Elf. Balance perfecto.",
+    "promo": "$90.000",
+    "badge": null,
+    "emoji": "ðŸ§",
+    "fileId": "elf_5ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 90000
+      }
+    ],
+    "customIcon": "/images/desechables/elf_5ml.png"
+  },
+  {
+    "id": 46,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Haze 3ML",
+    "price": 120000,
+    "desc": "La niebla que te lleva a otro nivel. Desechable potente 3ml.",
+    "promo": "$120.000",
+    "badge": null,
+    "emoji": "ðŸŒ«ï¸",
+    "fileId": "haze_3ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 120000
+      }
+    ],
+    "customIcon": "/images/desechables/haze_3ml.png"
+  },
+  {
+    "id": 47,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Dozo Live Rosin 2.5ML",
+    "price": 140000,
+    "desc": "¡El Dozo más potente! Live rosin de extracción en frío premium.",
+    "promo": "$140.000",
+    "badge": "TOP",
+    "emoji": "👑",
+    "fileId": "dozo_live_rosin_25ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 140000
+      }
+    ],
+    "customIcon": "/images/desechables/dozo_live_rosin_25ml.png"
+  },
+  {
+    "id": 48,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Dozo Liquid Badder 5ML",
+    "price": 140000,
+    "desc": "Badder líquido premium. Textura cremosa, efectos profundos.",
+    "promo": "$140.000",
+    "badge": null,
+    "emoji": "ðŸ¯",
+    "fileId": "dozo_liquid_badder_5ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 140000
+      }
+    ],
+    "customIcon": "/images/desechables/dozo_liquid_badder_5ml.png"
+  },
+  {
+    "id": 49,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Dozo Sugar Sauce 5ML",
+    "price": 140000,
+    "desc": "Salsa de azúcar terpénica. Sabor complejo y efectos superiores.",
+    "promo": "$140.000",
+    "badge": null,
+    "emoji": "ðŸ¬",
+    "fileId": "dozo_sugar_sauce_5ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 140000
+      }
+    ],
+    "customIcon": "/images/desechables/dozo_sugar_sauce_5ml.png"
+  },
+  {
+    "id": 50,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Dozo Liquid Bubble 3.5ML",
+    "price": 130000,
+    "desc": "Hash bubble premium en formato desechable. Pureza excepcional.",
+    "promo": "$130.000",
+    "badge": null,
+    "emoji": "ðŸ«§",
+    "fileId": "dozo_liquid_bubble_35ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 130000
+      }
+    ],
+    "customIcon": "/images/desechables/dozo_liquid_bubble_35ml.png"
+  },
+  {
+    "id": 51,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Dozo Moon Rocks 3.5ML",
+    "price": 130000,
+    "desc": "Moon rocks en formato líquido. La experiencia más intensa.",
+    "promo": "$130.000",
+    "badge": null,
+    "emoji": "ðŸŒ™",
+    "fileId": "dozo_moon_rocks_35ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 130000
+      }
+    ],
+    "customIcon": "/images/desechables/dozo_liquid_moon_rocks_3.5ml.png"
+  },
+  {
+    "id": 52,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Shroomz 8ML",
+    "price": 140000,
+    "desc": "Fórmula especial de la línea Shroomz. 8ml de pura potencia.",
+    "promo": "$140.000",
+    "badge": null,
+    "emoji": "ðŸ„",
+    "fileId": "shroomz_8ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 140000
+      }
+    ],
+    "customIcon": "/images/desechables/shroomz_8ml.png"
+  },
+  {
+    "id": 53,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Sumo 5ML con Rosin",
+    "price": 120000,
+    "desc": "¡Con Rosin real! El Sumo lleva tu experiencia al máximo nivel.",
+    "promo": "$120.000",
+    "badge": "ROSIN",
+    "emoji": "ðŸ†",
+    "fileId": "sumo_5ml_con_rosin",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 120000
+      }
+    ],
+    "customIcon": "/images/desechables/sumo_5ml.png"
+  },
+  {
+    "id": 54,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Sluggers 2ML",
+    "price": 150000,
+    "desc": "Dispositivos 100% originales. La mejor calidad garantizada.",
+    "promo": "$150.000",
+    "badge": null,
+    "emoji": "âš¾",
+    "fileId": "sluggers_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 150000
+      }
+    ],
+    "customIcon": "/images/desechables/sluggers_2ml.png"
+  },
+  {
+    "id": 55,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Sluggers Switch 2 Sabores",
+    "price": 150000,
+    "desc": "Switch entre 2 sabores en 1 dispositivo. Novedad exclusiva.",
+    "promo": "$150.000",
+    "badge": "2en1",
+    "emoji": "ðŸ”„",
+    "fileId": "sluggers_switch_2_sabores",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 150000
+      }
+    ],
+    "customIcon": "/images/desechables/sluggers_switch_2en1.png"
+  },
+  {
+    "id": 56,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "KIK 4.2ML",
+    "price": 110000,
+    "desc": "Gran formato, sabores intensos. Larga duración por uso.",
+    "promo": "$110.000",
+    "badge": null,
+    "emoji": "⚡",
+    "fileId": "kik_42ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 110000
+      }
+    ],
+    "customIcon": "/images/desechables/kik_4.2ml.png"
+  },
+  {
+    "id": 57,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Sauced 4ML",
+    "price": 120000,
+    "desc": "Concentrado sauced premium. Sabor terpénico intenso.",
+    "promo": "$120.000",
+    "badge": null,
+    "emoji": "💧",
+    "fileId": "sauced_4ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 120000
+      }
+    ],
+    "customIcon": "/images/desechables/sauced_4ml.png"
+  },
+  {
+    "id": 58,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Ghost 7ML",
+    "price": 130000,
+    "desc": "El fantasma. 7ml de hits invisibles pero poderosos.",
+    "promo": "$130.000",
+    "badge": null,
+    "emoji": "👻",
+    "fileId": "ghost_7ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 130000
+      }
+    ],
+    "customIcon": "/images/desechables/ghost_7ml.png"
+  },
+  {
+    "id": 59,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "GOAT 7ML",
+    "price": 130000,
+    "desc": "El Greatest Of All Time. 7ml de calidad máxima.",
+    "promo": "$130.000",
+    "badge": "GOAT",
+    "emoji": "ðŸ",
+    "fileId": "goat_7ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 130000
+      }
+    ],
+    "customIcon": "/images/desechables/goat_7ml.png"
+  },
+  {
+    "id": 60,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Elf 5.5ML",
+    "price": 130000,
+    "desc": "Versión especial Elf de 5.5ml. Más contenido, más experiencia.",
+    "promo": "$130.000",
+    "badge": null,
+    "emoji": "ðŸ§",
+    "fileId": "elf_55ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 130000
+      }
+    ],
+    "customIcon": "/images/desechables/elf_5.5ml.png"
+  },
+  {
+    "id": 61,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Tyson 2ML",
+    "price": 80000,
+    "desc": "Con el punch de Mike Tyson. Golpe de sabor en cada hit.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": null,
+    "emoji": "🥊",
+    "fileId": "tyson_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 80000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/desechables/tyson_2ml.png"
+  },
+  {
+    "id": 62,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Jungle Boys 2ML",
+    "price": 80000,
+    "desc": "La genética más exclusiva de Los Ángeles en formato desechable.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": null,
+    "emoji": "🌴",
+    "fileId": "jungle_boys_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 80000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/desechables/jungle_boys_2ml.png"
+  },
+  {
+    "id": 63,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Turn 2ML",
+    "price": 80000,
+    "desc": "Gira y disfruta. Desechable 2ml de alta rotación.",
+    "promo": "$80.000",
+    "badge": null,
+    "emoji": "ðŸ”„",
+    "fileId": "turn_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 80000
+      }
+    ],
+    "customIcon": "/images/desechables/turn_2ml.png"
+  },
+  {
+    "id": 64,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Runtz 2ML",
+    "price": 80000,
+    "desc": "La marca Runtz en desechable. Dulce y potente como siempre.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": null,
+    "emoji": "ðŸ¬",
+    "fileId": "runtz_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 80000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/desechables/runtz_2ml.png"
+  },
+  {
+    "id": 65,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Fryd 2ML",
+    "price": 80000,
+    "desc": "Fryd original. Sabores únicos y efectos duraderos.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": null,
+    "emoji": "ðŸ©",
+    "fileId": "fryd_2ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 80000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 70000
+      }
+    ],
+    "customIcon": "/images/desechables/fryd_2ml.png"
+  },
+  {
+    "id": 66,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Modus 3ML",
+    "price": 70000,
+    "desc": "Live rosin Modus en desechable. Pureza en cada inhalación.",
+    "promo": "1×$70k | 2×$120k",
+    "badge": null,
+    "emoji": "✨",
+    "fileId": "modus_3ml",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 70000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 60000
+      }
+    ],
+    "customIcon": "/images/desechables/modus_3ml.png"
+  },
+  {
+    "id": 67,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Haze Gomas x4",
+    "price": 25000,
+    "desc": "Paquete de 4 gomas Haze. Efecto gradual y duradero.",
+    "promo": "4und $25k | 40und $140k",
+    "badge": null,
+    "emoji": "ðŸ¬",
+    "fileId": "haze_gomas_x4",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 25000
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 14000
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "1 pack",
+        "qty": 1,
+        "price": 25000
+      },
+      {
+        "label": "10 packs",
+        "qty": 10,
+        "price": 140000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/haze_gomas_4und.png"
+  },
+  {
+    "id": 68,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Haze Gomas x10",
+    "price": 75000,
+    "desc": "Pack de 10 gomas premium. Mejor relación cantidad-precio.",
+    "promo": "$75.000",
+    "badge": null,
+    "emoji": "ðŸ¬",
+    "fileId": "haze_gomas_x10",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 75000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/hazex_gomas10.png"
+  },
+  {
+    "id": 69,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Dozo Mega Smashers",
+    "price": 90000,
+    "desc": "¡1250mg por goma! Las más potentes del catálogo. Pack x5.",
+    "promo": "Pack x5 $90.000",
+    "badge": "POTENTE",
+    "emoji": "💥",
+    "fileId": "dozo_mega_smashers",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 90000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/gomas_dozo_mega_smashers.png"
+  },
+  {
+    "id": 70,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Shockwaves 10und",
+    "price": 100000,
+    "desc": "500mg por goma. Ondas de efecto intenso y prolongado.",
+    "promo": "$100.000",
+    "badge": null,
+    "emoji": "⚡",
+    "fileId": "shockwaves_10und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 100000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/gomas_shockwavesx10.png"
+  },
+  {
+    "id": 71,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Shroomz 10und",
+    "price": 110000,
+    "desc": "500mg por goma de la línea Shroomz. Experiencia única.",
+    "promo": "$110.000",
+    "badge": null,
+    "emoji": "ðŸ„",
+    "fileId": "shroomz_10und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 110000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/gomas_shroomz.jpg"
+  },
+  {
+    "id": 72,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Sumo Tarro x25und",
+    "price": 140000,
+    "desc": "Tarro de 25 gomas. 400mg por unidad. El mejor precio por goma.",
+    "promo": "$140.000",
+    "badge": null,
+    "emoji": "ðŸº",
+    "fileId": "sumo_tarro_x25und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 140000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/tarro_gomitas_sumo.png"
+  },
+  {
+    "id": 73,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Sumo x2 und",
+    "price": 30000,
+    "desc": "2 gomas Sumo de 420mg cada una. Para iniciarte en la experiencia.",
+    "promo": "1×$30k | 2×$50k | Caja x30 $350k",
+    "badge": null,
+    "emoji": "ðŸ†",
+    "fileId": "sumo_x2_und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 30000
+      },
+      {
+        "minQty": 2,
+        "pricePerUnit": 25000
+      },
+      {
+        "minQty": 15,
+        "pricePerUnit": 23333.33
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "1 pack",
+        "qty": 1,
+        "price": 30000
+      },
+      {
+        "label": "2 packs",
+        "qty": 2,
+        "price": 50000
+      },
+      {
+        "label": "Caja x30",
+        "qty": 15,
+        "price": 350000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/gomas_sumox2und.png"
+  },
+  {
+    "id": 74,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Cookies x30und",
+    "price": 150000,
+    "desc": "30 gomas Cookies de 400mg cada una. Stock completo.",
+    "promo": "$150.000",
+    "badge": null,
+    "emoji": "ðŸª",
+    "fileId": "cookies_x30und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 150000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/tarro_goma_cookies.png"
+  },
+  {
+    "id": 75,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Hulk Torch x20und",
+    "price": 150000,
+    "desc": "750mg por goma. El poder del Hulk en cada mordisco.",
+    "promo": "$150.000",
+    "badge": "750MG",
+    "emoji": "💪",
+    "fileId": "hulk_torch_x20und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 150000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/tarro_goma_hulk_torch.png"
+  },
+  {
+    "id": 76,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Mushroom Gummies Astro Eight",
+    "price": 120000,
+    "desc": "15 gomas de hongos premium. Viaje cósmico garantizado.",
+    "promo": "$120.000",
+    "badge": null,
+    "emoji": "ðŸ„",
+    "fileId": "mushroom_gummies_astro_eight",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 120000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/gomas_astro_eight.png"
+  },
+  {
+    "id": 77,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Mushroom Gummies Extra Strength",
+    "price": 110000,
+    "desc": "10 gomas de alta concentración. Para los más experimentados.",
+    "promo": "$110.000",
+    "badge": "STRONG",
+    "emoji": "ðŸ„",
+    "fileId": "mushroom_gummies_extra_strength",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 110000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/goma_extra_strenght.png"
+  },
+  {
+    "id": 78,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Melo x10und",
+    "price": 60000,
+    "desc": "Con melatonina. Pack de 10 gomas para un descanso profundo.",
+    "promo": "$60.000",
+    "badge": "RELAX",
+    "emoji": "ðŸ˜´",
+    "fileId": "melo_x10und",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 60000
+      }
+    ],
+    "customIcon": "/images/comestibles-gomas/goma_melox10.png"
+  },
+  {
+    "id": 79,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Chocolatina Zupu Trippy",
+    "price": 100000,
+    "desc": "100g de chocolate + 4g de hongos. 24 microdosis. Presentación premium.",
+    "promo": "$100.000",
+    "badge": "PREMIUM",
+    "emoji": "ðŸ«",
+    "fileId": "chocolatina_zupu_trippy",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 100000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/chocolatina_zupuu_trippy.png"
+  },
+  {
+    "id": 80,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Bebida Haze Té Delta 9",
+    "price": 45000,
+    "desc": "Potente Té con 50mg de Delta 9. Efecto de 5 a 8 horas de duración.",
+    "promo": "$45.000",
+    "badge": "D9",
+    "emoji": "ðŸµ",
+    "fileId": "bebida_haze_te_delta_9",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 45000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/bebida_haze.png"
+  },
+  {
+    "id": 81,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Royal Honey",
+    "price": 15000,
+    "desc": "Con ingredientes naturales estimulantes. Experiencia sexual más dinámica.",
+    "promo": "$15.000",
+    "badge": null,
+    "emoji": "ðŸ¯",
+    "fileId": "royal_honey",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 15000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/royal_honey.png"
+  },
+  {
+    "id": 82,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Pink Pussycat Honey",
+    "price": 15000,
+    "desc": "Infusionada con ginseng. Sabor dulce y seductor. Para compartir.",
+    "promo": "$15.000",
+    "badge": null,
+    "emoji": "🌸",
+    "fileId": "pink_pussycat_honey",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 15000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/pink_pussycat_honey.png"
+  },
+  {
+    "id": 83,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Mike Tyson Drops",
+    "price": 40000,
+    "desc": "Gotas para ojos rojos. Alivio instantáneo con fórmula avanzada. 15ml.",
+    "promo": "$40.000",
+    "badge": null,
+    "emoji": "ðŸ‘ï¸",
+    "fileId": "mike_tyson_drops",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 40000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/mike_tyson_drops.png"
+  },
+  {
+    "id": 84,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Cueros Honey Puff",
+    "price": 4000,
+    "desc": "Paquete x5 cueros orgánicos importados. Papel de cáñamo premium.",
+    "promo": "1paq $4k | 10paq $35k | Caja surtida x50 $130k",
+    "badge": null,
+    "emoji": "📜",
+    "fileId": "cueros_honey_puff",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 4000
+      },
+      {
+        "minQty": 10,
+        "pricePerUnit": 3500
+      },
+      {
+        "minQty": 50,
+        "pricePerUnit": 2600
+      }
+    ],
+    "bulkOptions": [
+      {
+        "label": "1 paq",
+        "qty": 1,
+        "price": 4000
+      },
+      {
+        "label": "10 paq",
+        "qty": 10,
+        "price": 35000
+      },
+      {
+        "label": "Caja x50",
+        "qty": 50,
+        "price": 130000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/cueros_honey_puff.png"
+  },
+  {
+    "id": 85,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Cueros OCB",
+    "price": 120000,
+    "desc": "Caja con 25 cajitas de 50 cueros de papel de cáñamo orgánico cada una.",
+    "promo": "Caja $120.000",
+    "badge": null,
+    "emoji": "📦",
+    "fileId": "cueros_ocb",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 120000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/cueros_ocb.png"
+  },
+  {
+    "id": 86,
+    "category": "Comestibles: Otros",
+    "categorySlug": "comestibles-otros",
+    "name": "Cápsulas Vacías",
+    "price": 7000,
+    "desc": "Cápsulas vacías compatibles con la mayoría de baterías 510. Unidad.",
+    "promo": "$7.000 por unidad",
+    "badge": null,
+    "emoji": "⚫",
+    "fileId": "capsulas_vacias",
+    "pricingRules": [
+      {
+        "minQty": 1,
+        "pricePerUnit": 7000
+      }
+    ],
+    "customIcon": "/images/comestibles-otros/capsulas_vacias.png"
+  }
+]

@@ -1,0 +1,607 @@
+---
+import Layout from '../layouts/Layout.astro';
+import products from '../data/products.json';
+
+// Group products by category
+const categories = products.reduce((acc, product) => {
+  if (!acc[product.category]) {
+    acc[product.category] = { slug: product.categorySlug, products: [] };
+  }
+  acc[product.category].products.push(product);
+  return acc;
+}, {} as Record<string, { slug: string; products: typeof products }>);
+
+const categoryIcons: Record<string, string> = {
+  "Cápsulas": "fa-capsules",
+  "Cápsulas Tipo Importadas": "fa-flask",
+  "Cápsulas Importadas Originales": "fa-star",
+  "Baterías": "fa-bolt",
+  "Extracciones": "fa-fire",
+  "Desechables": "fa-wind",
+  "Comestibles: Gomas": "fa-candy-cane",
+  "Comestibles: Otros": "fa-leaf",
+};
+
+const categoryColors: Record<string, string> = {
+  "Cápsulas": "from-cyan-500 to-blue-600",
+  "Cápsulas Tipo Importadas": "from-purple-500 to-indigo-600",
+  "Cápsulas Importadas Originales": "from-amber-400 to-orange-500",
+  "Baterías": "from-yellow-400 to-amber-500",
+  "Extracciones": "from-orange-500 to-red-600",
+  "Desechables": "from-teal-400 to-cyan-500",
+  "Comestibles: Gomas": "from-pink-400 to-rose-500",
+  "Comestibles: Otros": "from-green-400 to-emerald-500",
+};
+---
+
+<Layout>
+  <!-- HEADER -->
+  <header class="relative overflow-hidden" id="top">
+    <!-- Background glow -->
+    <div class="absolute inset-0 bg-gradient-to-b from-purple-950/60 via-blue-950/40 to-transparent pointer-events-none"></div>
+    
+    <div class="relative container mx-auto px-4 pt-8 pb-6">
+      <!-- Top bar -->
+      <div class="flex items-center justify-between mb-8">
+        <!-- Logo removed as requested -->
+        <div class="flex items-center gap-3">
+        </div>
+
+        <!-- Cart button top -->
+        <button 
+          id="cartToggleTop"
+          class="relative flex items-center gap-2 bg-gradient-to-r from-purple-600/80 to-cyan-600/80 backdrop-blur-sm border border-purple-400/30 rounded-full px-4 py-2 text-sm font-bold text-white hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg"
+          onclick="toggleCart()"
+        >
+          <i class="fas fa-shopping-basket text-cyan-300"></i>
+          <span>Carrito</span>
+          <span id="cartCountTop" class="bg-cyan-400 text-black text-xs font-black rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </button>
+      </div>
+
+      <!-- Hero title -->
+      <div class="text-center py-8">
+        <div class="inline-block relative">
+          <!-- Glow ring -->
+          <div class="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-teal-500/20 blur-2xl animate-pulse"></div>
+          <h1 class="relative font-display text-6xl md:text-8xl lg:text-9xl tracking-[0.15em] text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-teal-300 drop-shadow-2xl">
+            ZAZA
+          </h1>
+        </div>
+        <p class="font-display text-2xl md:text-3xl tracking-[0.5em] text-purple-300 mt-2">SMOKE SHOP</p>
+        <div class="flex items-center justify-center gap-4 mt-4 text-sm text-slate-400">
+          <span class="flex items-center gap-1"><i class="fas fa-fire text-orange-400"></i> Catálogo Premium</span>
+          <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+          <span class="flex items-center gap-1"><i class="fas fa-shield-alt text-cyan-400"></i> Calidad Garantizada</span>
+          <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+          <span class="flex items-center gap-1"><i class="fab fa-whatsapp text-green-400"></i> Pago por WhatsApp</span>
+        </div>
+      </div>
+
+      <!-- Category nav pills (moved out of header) -->
+    </div>
+  </header>
+
+  <nav class="sticky top-0 z-50 bg-slate-950/60 backdrop-blur-md py-3 sm:py-4 border-b border-white/[0.02]" id="catNav">
+    <div class="container mx-auto px-4 flex flex-wrap justify-center gap-2">
+      {Object.entries(categories).map(([catName, data]) => (
+        <a
+          href={`#${data.slug}`}
+          class="category-pill relative px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/5 bg-white/[0.03] backdrop-blur-sm text-slate-400 hover:text-white hover:border-cyan-400/30 hover:bg-cyan-500/5 transition-all duration-300 cursor-pointer whitespace-nowrap"
+        >
+          <i class={`fas ${categoryIcons[catName] || 'fa-tag'} mr-1.5 opacity-70`}></i>
+          {catName}
+        </a>
+      ))}
+    </div>
+  </nav>
+
+  <!-- MAIN CATALOG -->
+  <main class="container mx-auto px-4 pb-40 mt-4">
+    {Object.entries(categories).map(([catName, data]) => (
+      <section id={data.slug} class="mb-16 scroll-mt-24">
+        <!-- Section header -->
+        <div class="flex items-center gap-4 mb-8">
+          <div class={`flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br ${categoryColors[catName] || 'from-slate-500 to-slate-700'} flex items-center justify-center shadow-lg`}>
+            <i class={`fas ${categoryIcons[catName] || 'fa-tag'} text-white text-lg`}></i>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display text-3xl md:text-4xl tracking-wider text-white">
+              {catName.toUpperCase()}
+            </h2>
+            <p class="text-slate-400 text-sm">{data.products.length} productos disponibles</p>
+          </div>
+          <!-- Decorative line -->
+          <div class={`flex-1 h-px bg-gradient-to-r ${categoryColors[catName] || 'from-slate-600'} to-transparent opacity-50 hidden md:block`}></div>
+        </div>
+
+        <!-- Products grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4">
+          {data.products.map((product) => (
+            <div 
+              class="product-card group relative bg-gradient-to-b from-slate-800/60 to-slate-900/80 backdrop-blur-sm border border-white/8 rounded-2xl p-4 flex flex-col transition-all duration-300 cursor-pointer hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1"
+              data-id={product.id}
+            >
+              <!-- Glow on hover -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/5 group-hover:to-purple-500/5 transition-all duration-300 pointer-events-none"></div>
+              
+              <!-- Emoji display -->
+              <div class="text-4xl mb-3 text-center leading-none select-none">
+                <img src={product.customIcon} alt={product.name} class="w-40 h-40 object-contain mx-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                <span style="display:none;">{product.emoji}</span>
+              </div>
+              
+              <!-- Badge -->
+              {product.badge && (
+                <span class={`self-start mb-2 text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full bg-gradient-to-r ${categoryColors[catName] || 'from-slate-500 to-slate-600'} text-white shadow-sm`}>
+                  {product.badge}
+                </span>
+              )}
+
+              <!-- Name -->
+              <h3 class="font-bold text-sm sm:text-base text-white leading-tight mb-1 line-clamp-2">{product.name}</h3>
+              
+              <!-- Desc -->
+              <p class="text-slate-400 text-xs sm:text-sm leading-snug mb-2 flex-1 line-clamp-2">{product.desc}</p>
+              
+              <!-- Promo info -->
+              {product.promo && (
+                <p class={product.promo.includes('×') || product.promo.includes('ml') || product.promo.includes('g') || product.name.includes('Gomas') || product.name.includes('Cueros') ? "promo-highlight" : "text-cyan-400/70 text-[10px] mb-6 leading-snug"}>
+                  {product.promo}
+                </p>
+              )}
+
+              {/* Bulk Selection Options */}
+              {product.bulkOptions && (
+                <div class="grid grid-cols-4 gap-1 mb-3">
+                  {product.bulkOptions.map(opt => (
+                    <button 
+                      class="bulk-btn text-[10px] font-black bg-slate-700 hover:bg-cyan-600 text-white py-1.5 px-0.5 rounded transition-all active:scale-95"
+                      onclick={`selectBulkQty(${product.id}, ${opt.qty})`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+              
+              {/* Price Block: Only show if there is a promotion */}
+              {product.promo && (
+                <div class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-400 mb-3">
+                  ${product.price.toLocaleString('es-CO')}
+                </div>
+              )}
+
+              <!-- Qty + Add -->
+              <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1 bg-black/40 rounded-full px-2 py-1 border border-white/5">
+                  <button 
+                    class="qty-btn w-9 h-9 rounded-full bg-slate-700 hover:bg-cyan-600 text-white text-base font-bold flex items-center justify-center transition-colors duration-200"
+                    onclick={`changeQty(event, ${product.id}, -1)`}
+                  >−</button>
+                  <input 
+                    type="number" 
+                    id={`qty-${product.id}`}
+                    value="1" 
+                    min="1" 
+                    readonly
+                    class="w-12 text-center bg-transparent border-none text-white text-base font-bold outline-none"
+                  />
+                  <button 
+                    class="qty-btn w-9 h-9 rounded-full bg-slate-700 hover:bg-cyan-600 text-white text-base font-bold flex items-center justify-center transition-colors duration-200"
+                    onclick={`changeQty(event, ${product.id}, 1)`}
+                  >+</button>
+                </div>
+                <button 
+                  class="add-btn flex-1 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white text-sm font-bold py-3 rounded-full flex items-center justify-center gap-1 transition-all duration-200 active:scale-95 shadow-md shadow-purple-900/30"
+                  onclick={`addToCart(${product.id})`}
+                >
+                  <i class="fas fa-plus text-xs"></i>
+                  Añadir
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </main>
+
+  <!-- FLOATING CART -->
+  <div id="cartFloat" class="fixed bottom-6 right-4 z-50">
+    <!-- Cart summary button -->
+    <button
+      id="cartFloatBtn"
+      onclick="toggleCart()"
+      class="flex items-center gap-3 bg-gradient-to-r from-purple-700 to-cyan-700 hover:from-purple-600 hover:to-cyan-600 border border-purple-400/30 rounded-2xl px-5 py-3 shadow-xl shadow-purple-900/50 transition-all duration-300 hover:scale-105 active:scale-95"
+    >
+      <div class="relative">
+        <i class="fas fa-shopping-cart text-white text-lg"></i>
+        <span id="cartBadge" class="absolute -top-2 -right-2 bg-cyan-400 text-black text-xs font-black rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      </div>
+      <div class="text-left">
+        <p class="text-white font-black text-sm leading-none">Mi Carrito</p>
+        <p id="cartTotal" class="text-cyan-300 text-xs font-bold leading-none mt-0.5">$0</p>
+      </div>
+      <i class="fas fa-chevron-up text-white/60 text-xs" id="cartChevron"></i>
+    </button>
+  </div>
+
+  <!-- CART PANEL (slide-up) -->
+  <div id="cartPanel" class="fixed bottom-0 left-0 right-0 z-40 transform translate-y-full transition-transform duration-400 ease-out">
+    <div class="bg-gradient-to-b from-slate-900 to-slate-950 border-t border-purple-500/30 rounded-t-3xl shadow-2xl max-h-[80vh] flex flex-col">
+      <!-- Handle -->
+      <div class="flex justify-center pt-3 pb-2">
+        <div class="w-12 h-1 rounded-full bg-slate-600"></div>
+      </div>
+      
+      <!-- Header -->
+      <div class="flex items-center justify-between px-5 pb-3 border-b border-slate-800">
+        <h3 class="font-display text-2xl tracking-wider text-white">MI PEDIDO</h3>
+        <button onclick="toggleCart()" class="text-slate-400 hover:text-white transition-colors">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Cart items -->
+      <div id="cartItems" class="flex-1 overflow-y-auto px-4 py-3 space-y-2">
+        <div id="cartEmpty" class="text-center py-12">
+          <div class="text-5xl mb-3">🛒</div>
+          <p class="text-slate-400 font-bold">Tu carrito está vacío</p>
+          <p class="text-slate-500 text-sm mt-1">Agrega productos para comenzar</p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="px-4 pb-6 pt-3 border-t border-slate-800 bg-slate-950/80">
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-slate-300 font-bold">Total a pagar:</span>
+          <span id="cartTotalDisplay" class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-400">$0</span>
+        </div>
+        <div class="flex gap-3">
+          <button
+            onclick="clearCart()"
+            class="flex-1 border border-slate-600 hover:border-red-500/50 hover:text-red-400 text-slate-400 py-3 rounded-xl font-bold text-sm transition-all duration-200"
+          >
+            <i class="fas fa-trash-alt mr-2"></i>Limpiar
+          </button>
+          <button
+            id="whatsappBtn"
+            onclick="checkoutWhatsApp()"
+            class="flex-2 flex-grow-[2] bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-green-900/30 transition-all duration-200 active:scale-95"
+          >
+            <i class="fab fa-whatsapp text-lg"></i>
+            Pedir por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="cartOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 hidden" onclick="toggleCart()"></div>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="fixed bottom-24 right-4 z-50 w-10 h-10 rounded-full bg-slate-800/80 border border-slate-600/50 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 transition-all duration-200 hover:scale-110">
+    <i class="fas fa-chevron-up text-sm"></i>
+  </a>
+</Layout>
+
+<style>
+    .promo-highlight {
+      background-color: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: #22d3ee !important;
+      font-weight: 800;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      display: inline-block;
+      margin-top: 0.5rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .scroll-mt-24 { scroll-margin-top: 6rem; }
+  
+  .product-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.1), transparent, rgba(168,85,247,0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .product-card:hover::before {
+    opacity: 1;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #cartPanel {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  #cartPanel.open {
+    transform: translateY(0);
+  }
+
+  .cart-item-enter {
+    animation: cartItemSlide 0.2s ease-out;
+  }
+
+  @keyframes cartItemSlide {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>
+
+<script define:vars={{ productsData: products }}>
+  // ============================================
+  // CART STATE
+  // ============================================
+  let cart = [];
+  let cartOpen = false;
+
+  // WhatsApp number - change this to your real number
+  const WA_NUMBER = "573177325057";
+
+  // Calculate Price Logic
+  window.calculateTotal = function(product, quantity, isBox = false) {
+    if (isBox && product.boxOption) {
+      return product.boxOption.price * quantity;
+    }
+
+    // Sort rules by minQty descending to find best discount
+    const rule = [...product.pricingRules]
+      .sort((a, b) => b.minQty - a.minQty)
+      .find(r => quantity >= r.minQty);
+
+    return quantity * (rule ? rule.pricePerUnit : product.price);
+  };
+
+  // ============================================
+  // QUANTITY CONTROLS
+  // ============================================
+  window.changeQty = function(event, productId, delta) {
+    event.stopPropagation();
+    const input = document.getElementById(`qty-${productId}`);
+    if (!input) return;
+    let current = parseInt(input.value) || 1;
+    current = Math.max(1, current + delta);
+    input.value = current;
+  };
+
+  // ============================================
+  // SELECT BULK QUANTITY
+  // ============================================
+  window.selectBulkQty = function(productId, qty) {
+    const input = document.getElementById(`qty-${productId}`);
+    if (input) {
+      input.value = qty;
+      
+      // Optional: Highlight selected button
+      const card = document.querySelector(`[data-id="${productId}"]`);
+      const buttons = card.querySelectorAll('.bulk-btn');
+      buttons.forEach(btn => btn.classList.remove('ring-2', 'ring-white'));
+      
+      const targetBtn = event.currentTarget;
+      targetBtn.classList.add('ring-2', 'ring-white');
+    }
+  };
+
+  // ============================================
+  // ADD TO CART
+  // ============================================
+  window.addToCart = function(productId) {
+    const product = productsData.find(p => p.id === productId);
+    if (!product) return;
+
+    const qtyInput = document.getElementById(`qty-${productId}`);
+    const quantity = parseInt(qtyInput?.value) || 1;
+    
+    // Check if box option was intended
+    const isBox = false;
+
+    const existing = cart.find(item => item.id === productId);
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      cart.push({ ...product, quantity, isBox });
+    }
+
+    // Reset quantity to 1
+    if (qtyInput) qtyInput.value = 1;
+    
+    // Remove highlights
+    const card = document.querySelector(`[data-id="${productId}"]`);
+    const buttons = card.querySelectorAll('.bulk-btn');
+    buttons.forEach(btn => btn.classList.remove('ring-2', 'ring-white'));
+
+    updateCartUI();
+    showAddedFeedback(productId);
+  };
+
+  function showAddedFeedback(productId) {
+    const card = document.querySelector(`[data-id="${productId}"]`);
+    if (!card) return;
+    card.style.borderColor = 'rgba(0,212,255,0.6)';
+    card.style.boxShadow = '0 0 20px rgba(0,212,255,0.2)';
+    setTimeout(() => {
+      card.style.borderColor = '';
+      card.style.boxShadow = '';
+    }, 500);
+
+    // Badge bounce
+    const badge = document.getElementById('cartBadge');
+    if (badge) {
+      badge.classList.add('cart-bounce');
+      setTimeout(() => badge.classList.remove('cart-bounce'), 300);
+    }
+  }
+
+  // ============================================
+  // UPDATE UI
+  // ============================================
+  function updateCartUI() {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalPrice = Math.round(cart.reduce((sum, item) => sum + window.calculateTotal(item, item.quantity, item.isBox), 0));
+    const formatted = '$' + totalPrice.toLocaleString('es-CO');
+
+    // Update counters
+    ['cartCountTop', 'cartBadge'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = totalItems;
+    });
+
+    // Update totals
+    ['cartTotal', 'cartTotalDisplay'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = formatted;
+    });
+
+    // Render cart items
+    renderCartItems();
+  }
+
+  function renderCartItems() {
+    const container = document.getElementById('cartItems');
+    const empty = document.getElementById('cartEmpty');
+    if (!container) return;
+
+    if (cart.length === 0) {
+      if (empty) empty.style.display = 'block';
+      container.querySelectorAll('.cart-item').forEach(el => el.remove());
+      return;
+    }
+
+    if (empty) empty.style.display = 'none';
+
+    container.querySelectorAll('.cart-item').forEach(el => el.remove());
+
+    cart.forEach(item => {
+      // Determine effective unit price based on rules
+      const rule = [...item.pricingRules]
+        .sort((a, b) => b.minQty - a.minQty)
+        .find(r => item.quantity >= r.minQty);
+      const effectiveUnitPrice = Math.round(rule ? rule.pricePerUnit : item.price);
+      
+      const subtotal = Math.round(window.calculateTotal(item, item.quantity, item.isBox));
+      const div = document.createElement('div');
+      div.className = 'cart-item cart-item-enter flex items-center gap-3 bg-slate-800/50 rounded-xl p-3 border border-white/5';
+      div.innerHTML = `
+        <span class="text-2xl flex-shrink-0">${item.emoji}</span>
+        <div class="flex-1 min-w-0">
+          <p class="text-white text-sm font-bold truncate">${item.name}</p>
+          <div class="flex items-center gap-2 mt-1">
+            <button onclick="updateCartItemQty(${item.id}, -1)" class="w-5 h-5 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-xs text-white">-</button>
+            <span class="text-xs font-bold text-white w-4 text-center">${item.quantity}</span>
+            <button onclick="updateCartItemQty(${item.id}, 1)" class="w-5 h-5 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-xs text-white">+</button>
+            <span class="text-slate-400 text-xs ml-2">${item.isBox ? '(Caja)' : (item.name.toLowerCase().includes('jeringa')) ? 'g' : 'und'} × $${effectiveUnitPrice.toLocaleString('es-CO')}</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="text-amber-300 font-black text-sm">$${subtotal.toLocaleString('es-CO')}</span>
+          <button onclick="removeFromCart(${item.id})" class="w-6 h-6 rounded-full bg-slate-700 hover:bg-red-600/60 text-slate-400 hover:text-white flex items-center justify-center text-xs transition-colors duration-200">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      `;
+      container.insertBefore(div, empty || null);
+    });
+  }
+
+  // ============================================
+  // REMOVE FROM CART
+  // ============================================
+  window.removeFromCart = function(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCartUI();
+  };
+
+  // ============================================
+  // UPDATE CART ITEM QUANTITY
+  // ============================================
+  window.updateCartItemQty = function(productId, delta) {
+    const item = cart.find(i => i.id === productId);
+    if (!item) return;
+    
+    item.quantity += delta;
+    
+    if (item.quantity <= 0) {
+      removeFromCart(productId);
+    } else {
+      updateCartUI();
+    }
+  };
+
+  // ============================================
+  // CLEAR CART
+  // ============================================
+  window.clearCart = function() {
+    cart = [];
+    updateCartUI();
+  };
+
+  // ============================================
+  // TOGGLE CART
+  // ============================================
+  window.toggleCart = function() {
+    cartOpen = !cartOpen;
+    const panel = document.getElementById('cartPanel');
+    const overlay = document.getElementById('cartOverlay');
+    const chevron = document.getElementById('cartChevron');
+
+    if (cartOpen) {
+      panel?.classList.add('open');
+      overlay?.classList.remove('hidden');
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+    } else {
+      panel?.classList.remove('open');
+      overlay?.classList.add('hidden');
+      if (chevron) chevron.style.transform = '';
+    }
+  };
+
+  // ============================================
+  // WHATSAPP CHECKOUT
+  // ============================================
+  window.checkoutWhatsApp = function() {
+    if (cart.length === 0) {
+      alert('Tu carrito está vacío. Agrega productos antes de pedir.');
+      return;
+    }
+
+    let message = 'RESUMEN DE PEDIDO\n\n';
+    
+    let total = 0;
+    cart.forEach(item => {
+      const subtotal = window.calculateTotal(item, item.quantity, item.isBox);
+      message += `Producto: ${item.name}${item.isBox ? ' (Caja)' : ''}\n`;
+      message += `Cantidad: ${item.quantity}\n`;
+      message += `Subtotal: $${subtotal.toLocaleString('es-CO')}\n\n`;
+      total += subtotal;
+    });
+
+    message += `TOTAL A PAGAR: $${total.toLocaleString('es-CO')}\n\n`;
+    message += 'Por favor, confirme si estos datos son correctos para proceder con su envio.';
+
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
+  // Init
+  updateCartUI();
+</script>
