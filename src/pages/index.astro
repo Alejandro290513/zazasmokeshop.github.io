@@ -127,7 +127,7 @@ const categoryColors: Record<string, string> = {
               
               <!-- Emoji display -->
               <div class="text-4xl mb-3 text-center leading-none select-none">
-                <img src={product.customIcon} alt={product.name} class="w-40 h-40 object-contain mx-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                <img src={`${import.meta.env.BASE_URL}${product.customIcon.replace(/^\//, '')}`} alt={product.name} class="w-40 h-40 object-contain mx-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
                 <span style="display:none;">{product.emoji}</span>
               </div>
               
@@ -357,7 +357,7 @@ const categoryColors: Record<string, string> = {
   }
 </style>
 
-<script define:vars={{ productsData: products }}>
+<script define:vars={{ productsData: products, BASE_URL: import.meta.env.BASE_URL }}>
   // ============================================
   // CART STATE
   // ============================================
@@ -513,7 +513,7 @@ const categoryColors: Record<string, string> = {
         
         // Handle images, with emoji fallback
         const imageContent = item.customIcon 
-          ? `<img src="${item.customIcon}" alt="${item.name}" class="w-12 h-12 object-contain rounded-lg flex-shrink-0" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+          ? `<img src="${BASE_URL}${item.customIcon.replace(/^\//, '')}" alt="${item.name}" class="w-12 h-12 object-contain rounded-lg flex-shrink-0" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
           : '';
         const emojiContent = `<span class="text-2xl flex-shrink-0 w-12 h-12 flex items-center justify-center ${item.customIcon ? 'hidden' : ''}">${item.emoji || '📦'}</span>`;
 
