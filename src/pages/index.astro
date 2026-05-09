@@ -669,27 +669,43 @@ const base = import.meta.env.BASE_URL;
     });
   });
 
-  window.checkoutWhatsApp = function() {
+window.checkoutWhatsApp = function() {
     if (cart.length === 0) {
       alert('Tu carrito está vacío. Agrega productos antes de pedir.');
       return;
     }
+    
+    const SHIPPING_COST = 18000;
+    
     let message = 'ZAZA SMOKE SHOP - Pedido\n\n';
-    let total = 0;
-    cart.forEach((item, index) => {
-      const subtotal = window.calculateTotal(item, item.quantity, item.isBox);
-      const unitPrice = window.calculateTotal(item, 1, item.isBox);
-      message += `${item.name}\n`;
-      message += `Precio unitario: $${unitPrice.toLocaleString('es-CO')}\n`;
-      message += `Cantidad: ${item.quantity}\n`;
-      message += `Subtotal: $${subtotal.toLocaleString('es-CO')}\n\n`;
-      total += subtotal;
+    
+    message += 'PRODUCTOS:\n';
+    let subtotal = 0;
+    cart.forEach(item => {
+      const itemSubtotal = window.calculateTotal(item, item.quantity, item.isBox);
+      const unitPrice = Math.round(window.calculateTotal(item, 1, item.isBox));
+      message += `• ${item.name}\n`;
+      message += `  Cantidad: ${item.quantity} × $${unitPrice.toLocaleString('es-CO')} = $${Math.round(itemSubtotal).toLocaleString('es-CO')}\n`;
+      subtotal += itemSubtotal;
     });
-    message += `Total: $${total.toLocaleString('es-CO')}\n\n`;
-    message += 'Confirma los datos para continuar.';
+    
+    const total = Math.round(subtotal) + SHIPPING_COST;
+    
+    message += `\nSubtotal: $${Math.round(subtotal).toLocaleString('es-CO')}\n`;
+    message += `Envío a todo Colombia: $${SHIPPING_COST.toLocaleString('es-CO')}\n`;
+    message += `TOTAL A PAGAR: $${total.toLocaleString('es-CO')}\n`;
+    
+    message += '\nEl envío incluye seguimiento y entrega puerta a puerta.';
+    message += '\n\nPor favor indícanos tu dirección de entrega:\n';
+    message += 'Departamento: \n';
+    message += 'Ciudad: \n';
+    message += 'Dirección (calle, número, apto): \n';
+    
+    message += '\nGracias, confirmaremos tu pedido en breve.';
+    
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
-
+ 
   updateCartUI();
 </script>
