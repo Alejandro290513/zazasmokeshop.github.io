@@ -36,13 +36,11 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
-  <!-- HEADER PRINCIPAL - Fondo integrado con el cuerpo -->
+  <!-- HEADER PRINCIPAL -->
   <header class="relative overflow-hidden bg-[#0A0A0F]" id="top">
-    <!-- Gradiente atmosférico que se fusiona con el fondo general -->
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.04),transparent_70%),radial-gradient(ellipse_at_top,rgba(6,182,212,0.03),transparent_50%)] pointer-events-none"></div>
     
     <div class="relative container mx-auto px-4 pt-5 pb-3 sm:pt-8 sm:pb-4">
-      <!-- Barra superior con carrito -->
       <div class="flex items-center justify-end mb-4 sm:mb-6">
         <button 
           id="cartToggleTop"
@@ -57,7 +55,6 @@ const base = import.meta.env.BASE_URL;
         </button>
       </div>
 
-      <!-- Título y branding -->
       <div class="text-center max-w-3xl mx-auto pb-2">
         <div class="inline-block relative mb-2">
           <div class="absolute -inset-6 rounded-full bg-gradient-to-r from-indigo-500/5 via-cyan-500/5 to-purple-500/5 blur-3xl"></div>
@@ -67,7 +64,6 @@ const base = import.meta.env.BASE_URL;
         </div>
         <p class="font-display text-lg sm:text-2xl lg:text-3xl tracking-[0.4em] sm:tracking-[0.5em] text-indigo-300/60 mb-3">SMOKE SHOP</p>
         
-        <!-- Badges informativos -->
         <div class="flex flex-wrap items-center justify-center gap-2 text-xs text-gray-500 font-medium">
           <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.02] border border-white/[0.04]">
             <span class="w-1.5 h-1.5 rounded-full bg-cyan-400/60"></span>
@@ -86,10 +82,9 @@ const base = import.meta.env.BASE_URL;
     </div>
   </header>
 
-  <!-- BARRA DE NAVEGACIÓN STICKY - SIEMPRE VISIBLE -->
+  <!-- BARRA DE NAVEGACIÓN STICKY -->
   <nav class="sticky top-0 z-40 bg-[#0A0A0F]/95 backdrop-blur-xl border-b border-white/[0.04] shadow-lg shadow-black/10" id="stickyNav">
     <div class="container mx-auto">
-      <!-- Versión Desktop: Botones organizados con scroll horizontal -->
       <div class="hidden md:flex items-center gap-1.5 px-4 py-2.5 overflow-x-auto scrollbar-none">
         <a href="#top" class="nav-btn flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-gray-500 hover:text-white hover:bg-white/[0.04] transition-all duration-200">
           <i class="fas fa-home text-[10px]"></i>
@@ -107,7 +102,6 @@ const base = import.meta.env.BASE_URL;
         ))}
       </div>
 
-      <!-- Versión Móvil: Menú desplegable compacto -->
       <div class="md:hidden px-3 py-2">
         <button 
           onclick="toggleMobileNav()"
@@ -121,7 +115,6 @@ const base = import.meta.env.BASE_URL;
           <i class="fas fa-chevron-down text-xs text-gray-500 transition-transform duration-300" id="mobileNavChevron"></i>
         </button>
         
-        <!-- Panel desplegable de categorías -->
         <div id="mobileNavPanel" class="hidden mt-2 bg-[#0A0A0F]/98 backdrop-blur-xl border border-white/[0.06] rounded-2xl overflow-hidden shadow-xl shadow-black/20 transition-all duration-300">
           <div class="p-2 space-y-1 max-h-[50vh] overflow-y-auto">
             <a href="#top" onclick="toggleMobileNav()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-gray-400 hover:text-white hover:bg-white/[0.04] transition-all duration-200">
@@ -147,7 +140,6 @@ const base = import.meta.env.BASE_URL;
       </div>
     </div>
     
-    <!-- Indicador de progreso sutil -->
     <div class="h-[1px] bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent"></div>
   </nav>
 
@@ -155,7 +147,6 @@ const base = import.meta.env.BASE_URL;
   <main class="container mx-auto px-4 pb-32 md:pb-40 mt-6 md:mt-8 max-w-7xl">
     {Object.entries(categories).map(([catName, data]) => (
       <section id={data.slug} class="mb-14 md:mb-16 scroll-mt-28">
-        <!-- Encabezado de sección -->
         <div class="flex items-center gap-3 mb-4 md:mb-6">
           <div class={`flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-xl bg-${categoryAccentColors[catName] || 'gray'}-500/10 border border-${categoryAccentColors[catName] || 'gray'}-500/20 flex items-center justify-center`}>
             <i class={`fas ${categoryIcons[catName] || 'fa-tag'} text-${categoryAccentColors[catName] || 'gray'}-300 text-sm md:text-base`}></i>
@@ -168,14 +159,12 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
 
-        <!-- Grid de productos -->
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5">
           {data.products.map((product) => (
             <div 
               class="product-card group relative bg-[#0f0f17] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-3 md:p-4 flex flex-col h-full transition-all duration-300 ease-out cursor-pointer hover:bg-[#12121a] hover:border-white/[0.12] hover:shadow-lg hover:shadow-black/20"
               data-id={product.id}
             >
-              {/* Imagen del producto */}
               <div class="relative mb-3 rounded-xl bg-gradient-to-b from-white/[0.02] to-transparent p-3 aspect-square flex items-center justify-center overflow-hidden">
                 <img
                   src={`${base}${product.customIcon.replace(/^\//, '')}`}
@@ -193,7 +182,6 @@ const base = import.meta.env.BASE_URL;
                 )}
               </div>
               
-              {/* Información */}
               <div class="flex-1 flex flex-col">
                 <h3 class="font-semibold text-sm text-gray-200 leading-snug mb-1 line-clamp-2 group-hover:text-white transition-colors duration-300">
                   {product.name}
@@ -203,7 +191,6 @@ const base = import.meta.env.BASE_URL;
                   {product.desc}
                 </p>
                 
-                {/* Promo */}
                 {product.promo && (
                   <div class="mb-2 px-2.5 py-1.5 rounded-lg bg-cyan-400/[0.04] border border-cyan-400/10 text-cyan-300/80 text-xs font-bold">
                     {!product.promo.includes('×') && !product.promo.includes('|') && (
@@ -213,27 +200,35 @@ const base = import.meta.env.BASE_URL;
                   </div>
                 )}
 
-                {/* Opciones bulk */}
                 {product.bulkOptions && (
-                  <div class="grid grid-cols-4 gap-1 mb-2">
-                    {product.bulkOptions.map(opt => (
+                  <div class="space-y-2 mb-3">
+                    <div class="grid grid-cols-2 gap-1.5">
+                      {product.bulkOptions.filter(opt => opt.qty !== 28).map(opt => (
+                        <button 
+                          class="bulk-btn text-[10px] md:text-[11px] font-bold bg-white/[0.03] hover:bg-white/[0.08] text-gray-400 hover:text-white py-2 px-1 rounded-lg transition-all duration-200 active:scale-95"
+                          onclick={`selectBulkQty(${product.id}, ${opt.qty})`}
+                          data-qty={opt.qty}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                    {product.bulkOptions.find(opt => opt.qty === 28) && (
                       <button 
-                        class="bulk-btn text-[10px] font-bold bg-white/[0.03] hover:bg-white/[0.08] text-gray-400 hover:text-white py-1.5 px-1 rounded-lg transition-all duration-200 active:scale-95"
-                        onclick={`selectBulkQty(${product.id}, ${opt.qty})`}
-                        data-qty={opt.qty}
+                        class="w-full bg-gradient-to-r from-amber-500/90 to-yellow-500/90 hover:from-amber-400 hover:to-yellow-400 text-black text-xs font-black py-3 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.98] shadow-lg shadow-amber-900/20 hover:shadow-amber-900/30 uppercase tracking-wider"
+                        onclick={`addOunceToCart(${product.id})`}
                       >
-                        {opt.label}
+                        <span>⚡</span>
+                        <span>Añadir 1 Onza (28g)</span>
                       </button>
-                    ))}
+                    )}
                   </div>
                 )}
                 
-                {/* Precio */}
                 <div class="text-lg md:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500 mb-3 tabular-nums">
                   ${product.price.toLocaleString('es-CO')}
                 </div>
 
-                <!-- Acciones -->
                 <div class="mt-auto space-y-2">
                   <div class="flex items-center justify-center gap-1 bg-black/30 rounded-full p-0.5 border border-white/[0.05]">
                     <button 
@@ -399,18 +394,15 @@ const base = import.meta.env.BASE_URL;
     font-variant-numeric: tabular-nums;
   }
 
-  /* Estilo para botones de navegación activos */
   .nav-btn.active {
     color: white;
     background: rgba(255, 255, 255, 0.05);
   }
 
-  /* Animación del panel móvil */
   #mobileNavChevron.rotate {
     transform: rotate(180deg);
   }
 
-  /* Animación de entrada del panel móvil */
   #mobileNavPanel {
     animation: slideDown 0.2s ease-out;
   }
@@ -432,8 +424,8 @@ const base = import.meta.env.BASE_URL;
   let cartOpen = false;
   let mobileNavOpen = false;
   const WA_NUMBER = "573177325057";
+  const SHIPPING_COST = 18000;
 
-  // Calcular total
   window.calculateTotal = function(product, quantity, isBox = false) {
     if (isBox && product.boxOption) {
       return product.boxOption.price * quantity;
@@ -444,7 +436,6 @@ const base = import.meta.env.BASE_URL;
     return Math.round(quantity * (rule ? rule.pricePerUnit : product.price));
   };
 
-  // Cambiar cantidad
   window.changeQty = function(event, productId, delta) {
     event.stopPropagation();
     const input = document.getElementById(`qty-${productId}`);
@@ -454,7 +445,6 @@ const base = import.meta.env.BASE_URL;
     input.value = current;
   };
 
-  // Seleccionar cantidad bulk
   window.selectBulkQty = function(productId, qty) {
     const input = document.getElementById(`qty-${productId}`);
     if (input) {
@@ -473,7 +463,26 @@ const base = import.meta.env.BASE_URL;
     }
   };
 
-  // Añadir al carrito
+  window.addOunceToCart = function(productId) {
+    const product = productsData.find(p => p.id === productId);
+    if (!product) return;
+    
+    const qtyInput = document.getElementById(`qty-${productId}`);
+    if (qtyInput) qtyInput.value = 28;
+    
+    const quantity = 28;
+    const existing = cart.find(item => item.id === productId);
+
+    if (existing) {
+      existing.quantity = Math.min(99, existing.quantity + quantity);
+    } else {
+      cart.push({ ...product, quantity, isBox: false });
+    }
+
+    updateCartUI();
+    showAddedFeedback(productId);
+  };
+
   window.addToCart = function(productId) {
     const product = productsData.find(p => p.id === productId);
     if (!product) return;
@@ -629,7 +638,6 @@ const base = import.meta.env.BASE_URL;
     }
   };
 
-  // Toggle del menú de navegación móvil
   window.toggleMobileNav = function() {
     mobileNavOpen = !mobileNavOpen;
     const panel = document.getElementById('mobileNavPanel');
@@ -647,9 +655,7 @@ const base = import.meta.env.BASE_URL;
     }
   };
 
-  // Resaltar categoría activa al hacer scroll
   window.addEventListener('scroll', () => {
-    const nav = document.getElementById('stickyNav');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-btn');
     
@@ -669,13 +675,11 @@ const base = import.meta.env.BASE_URL;
     });
   });
 
-window.checkoutWhatsApp = function() {
+  window.checkoutWhatsApp = function() {
     if (cart.length === 0) {
       alert('Tu carrito está vacío. Agrega productos antes de pedir.');
       return;
     }
-    
-    const SHIPPING_COST = 18000;
     
     let message = 'ZAZA SMOKE SHOP - Pedido\n\n';
     
@@ -695,17 +699,18 @@ window.checkoutWhatsApp = function() {
     message += `Envío a todo Colombia: $${SHIPPING_COST.toLocaleString('es-CO')}\n`;
     message += `TOTAL A PAGAR: $${total.toLocaleString('es-CO')}\n`;
     
-    message += '\nEl envío incluye seguimiento y entrega puerta a puerta.';
+    message += '\nEl envío incluye seguimiento y entrega puerta o corresponsal.';
     message += '\n\nPor favor indícanos tu dirección de entrega:\n';
     message += 'Departamento: \n';
     message += 'Ciudad: \n';
     message += 'Dirección (calle, número, apto): \n';
+    message += 'Comentarios: \n';
     
     message += '\nGracias, confirmaremos tu pedido en breve.';
     
     const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
- 
+
   updateCartUI();
 </script>

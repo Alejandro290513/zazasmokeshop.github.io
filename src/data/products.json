@@ -1936,5 +1936,680 @@
       }
     ],
     "customIcon": "/images/comestibles-otros/capsulas_vacias.png"
+  },
+  {
+    "id": 87,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Whole Melt 2ml",
+    "price": 80000,
+    "desc": "Desechable de alta calidad con sabor intenso.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/whole_melt_2ml.png",
+    "fileId": "whole_melt_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 },
+      { "minQty": 2, "pricePerUnit": 70000 }
+    ]
+  },
+  {
+    "id": 88,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "VPlus 3.5ml",
+    "price": 110000,
+    "desc": "Gran formato, sabores intensos.",
+    "promo": "$110.000",
+    "badge": null,
+    "customIcon": "/images/desechables/vplus_3.5ml.png",
+    "fileId": "vplus_3.5ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 110000 }
+    ]
+  },
+  {
+    "id": 89,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Stiiizy 2pods",
+    "price": 120000,
+    "desc": "Sistema de pods. Incluye batería + 2 pods.",
+    "promo": "$120.000",
+    "badge": "KIT",
+    "customIcon": "/images/desechables/stiiizy_2pods.png",
+    "fileId": "stiiizy_2pods",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 120000 }
+    ]
+  },
+  {
+    "id": 90,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Stiiizy 3pods",
+    "price": 100000,
+    "desc": "Recambio de pods. 3 pods de alta calidad.",
+    "promo": "3 pods x $100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/stiiizy_3pods.png",
+    "fileId": "stiiizy_3pods",
+    "pricingRules": [
+      { "minQty": 3, "pricePerUnit": 33333.33 }
+    ]
+  },
+  {
+    "id": 91,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Scobars 3ml",
+    "price": 70000,
+    "desc": "3ml de experiencia premium.",
+    "promo": "1×$70k | 2×$120k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/scobars_3ml.png",
+    "fileId": "scobars_3ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 70000 },
+      { "minQty": 2, "pricePerUnit": 60000 }
+    ]
+  },
+  {
+    "id": 92,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Polka Pen 2ml",
+    "price": 100000,
+    "desc": "Desechable de formato ergonómico.",
+    "promo": "$100.000",
+    "badge": null,
+    "customIcon": "/images/desechables/polka_pen_2ml.png",
+    "fileId": "polka_pen_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 100000 }
+    ]
+  },
+  {
+    "id": 93,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Pod Imperial 2pods",
+    "price": 120000,
+    "desc": "Sistema de pods. Batería con 2 pods incluidos.",
+    "promo": "$120.000",
+    "badge": "KIT",
+    "customIcon": "/images/desechables/pod_imperial_2pods.png",
+    "fileId": "pod_imperial_2pods",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 120000 }
+    ]
+  },
+  {
+    "id": 94,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Pod Imperial 3pods",
+    "price": 120000,
+    "desc": "Pods de repuesto. 3 pods por precio especial.",
+    "promo": "3 pods x $120k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/pod_imperial_3pods.png",
+    "fileId": "pod_imperial_3pods",
+    "pricingRules": [
+      { "minQty": 3, "pricePerUnit": 40000 }
+    ]
+  },
+  {
+    "id": 95,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Pacman 1ml",
+    "price": 60000,
+    "desc": "Desechable premium americano.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/pacman_1ml.png",
+    "fileId": "pacman_1ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 96,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Pacman 2ml",
+    "price": 80000,
+    "desc": "Desechable premium 2ml.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/pacman_2ml.png",
+    "fileId": "pacman_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 },
+      { "minQty": 2, "pricePerUnit": 70000 }
+    ]
+  },
+  {
+    "id": 97,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Packwoods 1ml",
+    "price": 60000,
+    "desc": "Marca reconocida, calidad garantizada.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/packwoods_1ml.png",
+    "fileId": "packwoods_1ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 98,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Packwoods Pen 1ml",
+    "price": 60000,
+    "desc": "Desechable ergonómico Packwoods.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/packwoods_pen_1ml.png",
+    "fileId": "packwoods_pen_1ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 99,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Mellow Fellows 4ml",
+    "price": 130000,
+    "desc": "Formato de gran capacidad.",
+    "promo": "$130.000",
+    "badge": null,
+    "customIcon": "/images/desechables/mellow_fellows_4ml.png",
+    "fileId": "mellow_fellows_4ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 130000 }
+    ]
+  },
+  {
+    "id": 100,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Luigi 2ml",
+    "price": 120000,
+    "desc": "Incluye Pre-Roll adicional.",
+    "promo": "$120.000",
+    "badge": "KIT",
+    "customIcon": "/images/desechables/luigi_2ml.png",
+    "fileId": "luigi_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 120000 }
+    ]
+  },
+  {
+    "id": 101,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Litto 2ml",
+    "price": 80000,
+    "desc": "Calidad Litto, formato 2ml.",
+    "promo": "$80.000",
+    "badge": null,
+    "customIcon": "/images/desechables/litto_2ml.png",
+    "fileId": "litto_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 }
+    ]
+  },
+  {
+    "id": 102,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Levotic 2ml",
+    "price": 80000,
+    "desc": "Desechable 2ml estándar.",
+    "promo": "$80.000",
+    "badge": null,
+    "customIcon": "/images/desechables/levotic_2ml.png",
+    "fileId": "levotic_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 }
+    ]
+  },
+  {
+    "id": 103,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Jeeter 1ml",
+    "price": 60000,
+    "desc": "Clásico Jeeter, 1ml.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/jeeter_1ml.png",
+    "fileId": "jeeter_1ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 104,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Jeeter 3ml",
+    "price": 100000,
+    "desc": "Versión Jeeter de gran formato.",
+    "promo": "$100.000",
+    "badge": null,
+    "customIcon": "/images/desechables/jeeter_3ml.png",
+    "fileId": "jeeter_3ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 100000 }
+    ]
+  },
+  {
+    "id": 105,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Hi on Nature 2ml",
+    "price": 80000,
+    "desc": "Desechable 2ml de calidad.",
+    "promo": "$80.000",
+    "badge": null,
+    "customIcon": "/images/desechables/hi_on_nature_2ml.png",
+    "fileId": "hi_on_nature_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 }
+    ]
+  },
+  {
+    "id": 106,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Hidden Hills 2ml",
+    "price": 80000,
+    "desc": "Marca reconocida, formato 2ml.",
+    "promo": "$80.000",
+    "badge": null,
+    "customIcon": "/images/desechables/hidden_hills_2ml.png",
+    "fileId": "hidden_hills_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 }
+    ]
+  },
+  {
+    "id": 107,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Half Bakd Sauced 1ml",
+    "price": 60000,
+    "desc": "Sauced premium 1ml.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/half_bakd_sauced_1ml.png",
+    "fileId": "half_bakd_sauced_1ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 108,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Geek THC X 3ml",
+    "price": 120000,
+    "desc": "Desechable Geek de 3ml.",
+    "promo": "$120.000",
+    "badge": null,
+    "customIcon": "/images/desechables/geek_thcx_3ml.png",
+    "fileId": "geek_thcx_3ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 120000 }
+    ]
+  },
+  {
+    "id": 109,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Geek THC X 4.2ml",
+    "price": 120000,
+    "desc": "Desechable Geek de 4.2ml.",
+    "promo": "$120.000",
+    "badge": null,
+    "customIcon": "/images/desechables/geek_thcx_4.2ml.png",
+    "fileId": "geek_thcx_42ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 120000 }
+    ]
+  },
+  {
+    "id": 110,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Geek THC X 6ml",
+    "price": 140000,
+    "desc": "Desechable Geek de 6ml.",
+    "promo": "$140.000",
+    "badge": null,
+    "customIcon": "/images/desechables/geek_tchx_6ml.png",
+    "fileId": "geek_tchx_6ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 140000 }
+    ]
+  },
+  {
+    "id": 111,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Gaz Burst 2ml",
+    "price": 80000,
+    "desc": "Desechable premium 2ml.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/gaz_burst_2ml.png",
+    "fileId": "gaz_burst_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 },
+      { "minQty": 2, "pricePerUnit": 70000 }
+    ]
+  },
+  {
+    "id": 112,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "FVKD Exotics 3.5ml",
+    "price": 110000,
+    "desc": "Desechable exótico 3.5ml.",
+    "promo": "$110.000",
+    "badge": null,
+    "customIcon": "/images/desechables/fvkd_exotics_3.5ml.png",
+    "fileId": "fvkd_exotics_35ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 110000 }
+    ]
+  },
+  {
+    "id": 113,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "FVKD Premium 3.5ml",
+    "price": 110000,
+    "desc": "Desechable premium 3.5ml.",
+    "promo": "$110.000",
+    "badge": null,
+    "customIcon": "/images/desechables/fvkd_premiun_3.5ml.png",
+    "fileId": "fvkd_premiun_35ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 110000 }
+    ]
+  },
+  {
+    "id": 114,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Fusion Hippie 2ml",
+    "price": 60000,
+    "desc": "Desechable 2ml de calidad.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/fusion_hippie_2ml.png",
+    "fileId": "fusion_hippie_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 115,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Favorites Minis 2ml",
+    "price": 80000,
+    "desc": "Desechable 2ml, formato mini.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/favorites_minis_2ml.png",
+    "fileId": "favorites_minis_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 },
+      { "minQty": 2, "pricePerUnit": 70000 }
+    ]
+  },
+  {
+    "id": 116,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Eightbit 2ml",
+    "price": 100000,
+    "desc": "Estilo único, formato 2ml.",
+    "promo": "$100.000",
+    "badge": null,
+    "customIcon": "/images/desechables/eightbit_2ml.png",
+    "fileId": "eightbit_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 100000 }
+    ]
+  },
+  {
+    "id": 117,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Dozo XL 2ml",
+    "price": 80000,
+    "desc": "Calidad Dozo, formato 2ml.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/dozo_xl_2ml.png",
+    "fileId": "dozo_xl_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 },
+      { "minQty": 2, "pricePerUnit": 70000 }
+    ]
+  },
+  {
+    "id": 118,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Donuts Switch 2ml",
+    "price": 100000,
+    "desc": "Sistema de 2 tanques.",
+    "promo": "2 tanques",
+    "badge": "2en1",
+    "customIcon": "/images/desechables/donuts_switch_2ml.png",
+    "fileId": "donuts_switch_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 100000 }
+    ]
+  },
+  {
+    "id": 119,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Brass Knuckles 1ml",
+    "price": 60000,
+    "desc": "Clásico Brass Knuckles 1ml.",
+    "promo": "1×$60k | 2×$100k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/brass_knuckles_1ml.png",
+    "fileId": "brass_knuckles_1ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 60000 },
+      { "minQty": 2, "pricePerUnit": 50000 }
+    ]
+  },
+  {
+    "id": 120,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Big Chief 2ml",
+    "price": 80000,
+    "desc": "Calidad Big Chief, formato 2ml.",
+    "promo": "1×$80k | 2×$140k",
+    "badge": "PROMO",
+    "customIcon": "/images/desechables/big_chief_2ml.png",
+    "fileId": "big_chief_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 },
+      { "minQty": 2, "pricePerUnit": 70000 }
+    ]
+  },
+  {
+    "id": 121,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Bees Knees 2ml",
+    "price": 80000,
+    "desc": "Desechable 2ml premium.",
+    "promo": "$80.000",
+    "badge": null,
+    "customIcon": "/images/desechables/bees_knees_2ml.png",
+    "fileId": "bees_knees_2ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 80000 }
+    ]
+  },
+  {
+    "id": 122,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Bayked 6ml",
+    "price": 100000,
+    "desc": "Gran capacidad 6ml.",
+    "promo": "$100.000",
+    "badge": null,
+    "customIcon": "/images/desechables/bayked_6ml.png",
+    "fileId": "bayked_6ml",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 100000 }
+    ]
+  },
+  {
+    "id": 123,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Ace Ultra Premium 2ml (M)",
+    "price": 110000,
+    "desc": "Calidad premium, versión M.",
+    "promo": "$110.000",
+    "badge": null,
+    "customIcon": "/images/desechables/ace_ultra_premium_2ml.png",
+    "fileId": "ace_ultra_premium_2ml_m",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 110000 }
+    ]
+  },
+  {
+    "id": 124,
+    "category": "Desechables",
+    "categorySlug": "desechables",
+    "name": "Ace Ultra Premium 2ml (N)",
+    "price": 100000,
+    "desc": "Calidad premium, versión N.",
+    "promo": "$100.000",
+    "badge": null,
+    "customIcon": "/images/desechables/ace_ultra_premiun_2ml.png",
+    "fileId": "ace_ultra_premium_2ml_n",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 100000 }
+    ]
+  },
+  {
+    "id": 125,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Aera",
+    "price": 150000,
+    "desc": "Pack de 20 gomas premium.",
+    "promo": "$150.000",
+    "badge": null,
+    "customIcon": "/images/comestibles-gomas/tarro_goma_aera.png",
+    "fileId": "aera",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 150000 }
+    ]
+  },
+  {
+    "id": 126,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Black Roses",
+    "price": 150000,
+    "desc": "Pack de 20 gomas premium.",
+    "promo": "$150.000",
+    "badge": null,
+    "customIcon": "/images/comestibles-gomas/tarro_goma_black_roses.png",
+    "fileId": "black_roses",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 150000 }
+    ]
+  },
+  {
+    "id": 127,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Galaxy Treats",
+    "price": 110000,
+    "desc": "Pack de 20 gomas premium.",
+    "promo": "$110.000",
+    "badge": null,
+    "customIcon": "/images/comestibles-gomas/tarro_goma_galaxy_treats.png",
+    "fileId": "galaxy_treats",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 110000 }
+    ]
+  },
+  {
+    "id": 128,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Higher Education D9",
+    "price": 25000,
+    "desc": "Pack 1 goma premium.",
+    "promo": "3 x $60k",
+    "badge": "PROMO",
+    "customIcon": "/images/comestibles-gomas/higher_education_d9.png",
+    "fileId": "higher_education_d9",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 25000 },
+      { "minQty": 3, "pricePerUnit": 20000 }
+    ]
+  },
+  {
+    "id": 129,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Haze Gomas x2",
+    "price": 30000,
+    "desc": "Pack 2 gomas Haze.",
+    "promo": "$30.000",
+    "badge": null,
+    "customIcon": "/images/comestibles-gomas/haze_gomasx2.png",
+    "fileId": "haze_gomas_x2",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 30000 }
+    ]
+  },
+  {
+    "id": 130,
+    "category": "Comestibles: Gomas",
+    "categorySlug": "comestibles-gomas",
+    "name": "Zoomers",
+    "price": 110000,
+    "desc": "Pack de 10 gomas premium.",
+    "promo": "$110.000",
+    "badge": null,
+    "customIcon": "/images/comestibles-gomas/goma_zoomers.png",
+    "fileId": "zoomers",
+    "pricingRules": [
+      { "minQty": 1, "pricePerUnit": 110000 }
+    ]
   }
 ]
